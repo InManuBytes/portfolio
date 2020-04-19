@@ -1,0 +1,6 @@
+# mac
+.DS_Store
+
+# generated
+public/bundle.js
+node_modules
