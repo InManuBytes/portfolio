@@ -2,7 +2,7 @@
   "name": "challenge_1",
   "version": "1.0.0",
   "description": "portfolio page",
-  "homepage": "http://inmanubytes.github.io/portfolio",
+  "homepage": "http://inmanubytes.github.io/portfolio/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
