@@ -23,6 +23,7 @@ class App extends Component {
           </Header>
           <Content style={{ padding: '0 50px', marginTop: 64 }}>
             Content
+            For my portfolio
           </Content>
           <Footer style={{ textAlign: 'center' }}>Manu ©2020</Footer>
         </Layout>
