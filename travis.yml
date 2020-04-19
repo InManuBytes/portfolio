@@ -1,23 +1,18 @@
 language: node_js
-node_js:
-  - "stable"
+node_js: "stable"
+
 cache:
   directories:
   - node_modules
-script:
-  - npm run build
-branches:
-  only:
-  - master
+
+before_deploy:
+  - "npm run build"
+
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $githubtoken
+  github_token: $GITHUB_TOKEN
   local_dir: public
   keep_history: true
-  edge:
+  on:
     branch: master
-notifications:
-  email:
-    on_success: never
-    on_failure: always
