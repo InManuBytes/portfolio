@@ -10,7 +10,7 @@
     "dev:start": "json-server --watch ./data/db.json",
     "build": "webpack -p",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
