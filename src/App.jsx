@@ -18,7 +18,7 @@ class App extends Component {
       <div className="scrollable-container" ref={node => {this.container = node;}}>
         <Layout>
           {/* move the header to the layout */}
-          <Header style={{ color: 'white', position: 'fixed', zIndex: 1, width: '100%' }}>
+          <Header>
             Portfolio
           </Header>
           <Content style={{ padding: '0 50px', marginTop: 64 }}>
