@@ -2,5 +2,5 @@
 .DS_Store
 
 # generated
-public/bundle.js
+build/
 node_modules
