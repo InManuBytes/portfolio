@@ -1,12 +1,15 @@
 import React from 'react';
-import Typical from 'react-typical';
 import Prompt from './Prompt';
+import Portfolio from './Portfolio';
+
+import { Typography } from 'antd';
+const { Text } = Typography;
 
 class Console extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
+      text: [],
       command: 'cat about.txt'
     }
     this.loadText = this.loadText.bind(this);
@@ -14,16 +17,27 @@ class Console extends React.Component{
   }
 
   loadText() {
-    this.setState({ text: 'Hi! I\'m Manu. I love data and complex problems. \n Wamt to see some of my work? Click on one of my projecst below.' })
+    this.setState({ text: ['I love data and complex problems.', 'As a software engineer with a passion for the backend and databases, I believe a lot of the solutions to our most pressing problems are in the intersection between technology, data and community.', 'Want to see some of my work? Click on one of my projecst below.']})
   }
 
   showText() {
     const { text, command } = this.state;
     return (
       <div>
-        inManu@Bytes: $ {command}
+        <Text type="secondary">inManu@Bytes</Text>:<Text type="warning">~</Text><Text type="danger">$</Text> {command}
         <br />
-        {text}
+        <br />
+        {text.map(sentence => {
+          return (
+            <p>
+              {sentence}
+            </p>
+          )
+        })}
+        <br />
+        {/* Links to portfolio */}
+        <Portfolio />
+        <br />
         <Prompt command={''} waitBeforeShow={1000} />
       </div>
     )

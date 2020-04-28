@@ -5,7 +5,8 @@ import utils from './utils';
 import Console from './Console';
 
 // components from antd
-import { Input, Pagination, Layout, Row, Col, Divider, Empty, Affix, Statistic, Button } from 'antd';
+import { Typography, Layout } from 'antd';
+const { Text } = Typography;
 const { Header, Content, Footer } = Layout;
 
 class App extends Component {
@@ -23,10 +24,20 @@ class App extends Component {
       <div className="scrollable-container" ref={node => {this.container = node;}}>
         <Layout>
           {/* move the header to the layout */}
-          <Header>
-            Last Login:{login}
-          </Header>
-          <Content style={{ padding: '0 50px', marginTop: 64 }}>
+          <Content style={{ padding: '0px 50px', minHeight: '1000px' }}>
+            <Text type="secondary">
+              Last Login:{login}
+              <br />
+              <br />
+              <pre>
+                ██╗  ██╗██╗       ██╗███╗   ███╗    ███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ <br />
+                ██║  ██║██║       ██║████╗ ████║    ████╗ ████║██╔══██╗████╗  ██║██║   ██║ <br />
+                ███████║██║       ██║██╔████╔██║    ██╔████╔██║███████║██╔██╗ ██║██║   ██║ <br />
+                ██╔══██║██║       ██║██║╚██╔╝██║    ██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║ <br />
+                ██║  ██║██║▄█╗    ██║██║ ╚═╝ ██║    ██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██╗ <br />
+                ╚═╝  ╚═╝╚═╝╚═╝    ╚═╝╚═╝     ╚═╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝ <br />
+              </pre>
+            </Text>
             <Console />
           </Content>
           <Footer style={{ textAlign: 'center' }}>Manu ©2020</Footer>
